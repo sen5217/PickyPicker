@@ -1,3 +1,4 @@
+HELLO
 Be able to input your “go to foods” and check if restaurant menus have those foods on the app
 Goals system to help try new stuff?
 Ask for what type of goal: trying new restaurants, trying new foods, new cuisines, etc
