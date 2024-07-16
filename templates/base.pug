@@ -1,0 +1,18 @@
+html 
+    head 
+        title PickyPicker
+    body 
+        nav(style = "display: flex; justify-content: space-between;")
+            a(href="/index") Home
+            if loggedIn 
+                a(href="/user") Profile
+                a(href="/addMenu") Add Menu
+            else 
+                a(href="/login") Login
+        block content 
+        footer
+            p PickyPicker 
+
+
+
+
