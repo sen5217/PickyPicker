@@ -1,16 +1,21 @@
 html 
     head 
         title PickyPicker
-    body 
-        nav(style = "display: flex; justify-content: space-between;")
-            a(href="/index") Home
-            if loggedIn 
-                a(href="/user") Profile
-                a(href="/addMenu") Add Menu
-            else 
-                a(href="/login") Login
-        block content 
-        footer
+    body(style="margin:0px;")
+        nav(style = "display: flex; justify-content: space-between; background-color: coral; border-bottom: 3px solid lightsalmon; padding: 20px;")
+            div(style="display: flex; justify-content: space-between; width:15%;")
+                a(href="/index") Home
+                a(href='/about') About
+            div(style="display: flex; justify-content: space-between; width:15%;")
+                if loggedIn 
+                    a(href="/user") Profile
+                    a(href="/addMenu") Contribute
+                else 
+                    a(href="/login") Login
+                    a(href="/signup") Sign Up
+        div(style="margin:10px")
+            block content 
+        footer(style="background-color:coral; padding:20px; border-top: 3px solid lightsalmon;")
             p PickyPicker 
 
 
