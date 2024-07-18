@@ -20,6 +20,10 @@ app.get('/login', (req, res) => {
   res.render('logIn.pug', {loggedIn: LOGGEDIN})
 });
 
+app.get('/signup', (req, res) => { 
+  res.render('signUp.pug', {loggedIn: LOGGEDIN})
+});
+
 app.post('/login', (req, res) => { 
   res.render('logIn.pug', {loggedIn: true})
   //https://stackoverflow.com/questions/5710358/how-to-access-post-form-fields-in-express

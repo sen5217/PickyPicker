@@ -1,5 +1,18 @@
 extends base.pug
 
 block content 
-    form(action="/signup", method="post") 
+    //form(action="/signup", method="post") 
     //extend with fields to sign up
+       p #{user}
+    form(style='display: flex; flex-direction: column; width:50%; margin:auto; border: 3px solid darkslategrey; border-radius: 5px; padding:10px; background-color: aliceblue;' action='/login' method='POST')
+        h3() Sign Up
+        div(style='width:100%; margin-bottom: 5px;')
+            label(for='email') Email: 
+            input(type='email' placeholder='johndoe@email.com' id='email' style='')
+        div(style='width:100%; margin-bottom: 5px;')
+            label(for='password') Password: 
+            input(type='password' placeholder='*******' id='Password' style='')
+        div(style='width:100%; margin-bottom: 5px;')
+            label(for='password') Re-Enter Password: 
+            input(type='password' placeholder='*******' id='Password' style='')
+        button() Sign Up
