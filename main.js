@@ -1,7 +1,9 @@
 import express from 'express'
-
 const app = express();
 const port = 3000;
+
+import pg from 'pg-promise'
+//const db = pgp('postgres://username:password@host:port/database')
 
 app.set("views", "./templates")
 app.set("view engine", "pug")  
