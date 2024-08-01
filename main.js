@@ -2,11 +2,23 @@ import express from 'express'
 const app = express();
 const port = 3000;
 
-import pg from 'pg-promise'
-//const db = pgp('postgres://username:password@host:port/database')
+import pgp from 'pg-promise'
+const configObj={
+  user: 'postgres',
+  host: 'localhost',
+  database: 'dvdrental',
+  password: 'Horse1815',
+  port: 5432
+}
+
+const db = pgp()(configObj)
+
+db.one("SELECT * FROM customer WHERE customer_id = 1").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+
 
 app.set("views", "./templates")
 app.set("view engine", "pug")  
+app.use(express.static("./static"))
 
 const LOGGEDIN = false
 

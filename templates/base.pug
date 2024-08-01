@@ -1,8 +1,10 @@
 html 
     head 
         title PickyPicker
+        link(rel='stylesheet', href='css/base.css')
     body(style="margin:0px;")
-        nav(style = "display: flex; justify-content: space-between; background-color: ghostwhite; border-bottom: 3px solid ghostwhite; padding: 20px;")
+    
+        nav(style = "display: flex; justify-content: space-between; background-color: var(--site-bg-color); border-bottom: 3px solid var(--site-border-color); padding: 20px;")
             div(style="display: flex; justify-content: space-between; width:15%;")
                 a(href="/index") Home
                 a(href='/about') About
@@ -15,7 +17,7 @@ html
                     a(href="/signup") Sign Up
         div(style="margin:10px")
             block content 
-        footer(style="background-color: ghostwhite; padding: 20px; border-top: 3px solid ghostwhite;")
+        footer(style="background-color: var(--site-bg-color); padding: 20px; border-top: 3px solid var(--site-border-color);")
             p PickyPicker 
 
 
