@@ -11,5 +11,3 @@ class User{
     }
 }
 
-let u = await User.getUserById(1)
-console.log(u.first_name,u.last_name)
