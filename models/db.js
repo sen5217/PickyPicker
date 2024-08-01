@@ -8,5 +8,4 @@ const configObj={
 }
 
 const db = pgp()(configObj)
-
-db.one("SELECT * FROM customer WHERE customer_id = 1").then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+export default db

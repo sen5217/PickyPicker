@@ -1,9 +1,15 @@
-import db from "./db"
+import db from "./db.js"
 class User{
-    constructor(id){
-
+    constructor(first_name,last_name,email){
+        this.first_name=first_name
+        this.last_name=last_name
+        this.email=email
     }
-    static getUserById(id){
-        // db.one("SELECT * FROM customer WHERE customer_id = $1",[id])
+    static async getUserById(id){
+        let user_data = await db.one("SELECT first_name,last_name,email FROM users WHERE user_id = $1",[id])
+        return new User(user_data["first_name"],user_data["last_name"],user_data["email"])
     }
 }
+
+let u = await User.getUserById(1)
+console.log(u.first_name,u.last_name)
