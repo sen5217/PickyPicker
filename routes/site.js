@@ -11,8 +11,6 @@ router.get('/login', login)
 
 router.get('/signup', signUp)
 
-router.get('/addMenu', addMenu);
-
 router.get('/profile', profile);
 
 

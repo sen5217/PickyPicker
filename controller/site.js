@@ -12,10 +12,6 @@ function signUp(req,res){
     res.render('signUp.pug', {loggedIn: LOGGEDIN})
 }
 
-function addMenu(req,res){
-    res.render('addMenu.pug', {loggedIn: LOGGEDIN})
-}
-
 function profile(req,res){
     res.render('profile.pug', {loggedIn: LOGGEDIN})
 }
