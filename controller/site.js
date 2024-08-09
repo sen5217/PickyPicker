@@ -1,4 +1,7 @@
 const LOGGEDIN = false
+import session from "express-session"
+
+
 
 function index(req,res){
     res.render('index.pug',{loggedIn: LOGGEDIN} )
@@ -16,4 +19,4 @@ function profile(req,res){
     res.render('profile.pug', {loggedIn: LOGGEDIN})
 }
 
-export {index,login,signUp,addMenu,profile}
+export {index,login,signUp,profile}
